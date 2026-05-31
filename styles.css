@@ -192,7 +192,7 @@ footer ul a:hover{color:#fff}
   .hero-visual{height:360px}
   .about-grid{grid-template-columns:1fr;gap:2rem}
   .contact-grid{grid-template-columns:1fr;gap:2rem}
-  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr}
   .rev-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
