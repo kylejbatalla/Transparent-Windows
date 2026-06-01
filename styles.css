@@ -137,7 +137,6 @@ header.nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(14px);box-shad
 .float-badge{position:absolute;background:#fff;border-radius:16px;padding:.85rem 1.1rem;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:.7rem;font-family:var(--ff-head);font-weight:700;font-size:.95rem;border:1px solid var(--line)}
 .float-badge .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--sky-50);color:var(--sky-600)}
 .fb-1{top:8%;left:-2%;animation:bob 4s ease-in-out infinite}
-.fb-2{bottom:10%;left:-4%;animation:bob 4s ease-in-out infinite .8s}
 .fb-3{bottom:26%;right:4%;animation:bob 5s ease-in-out infinite .4s}
 /* keep the badges readable on the night-sky window */
 [data-theme="dark"] .float-badge{background:#fff;color:#0c2540;border-color:#e4eef5}
