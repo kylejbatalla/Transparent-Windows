@@ -305,12 +305,11 @@ body.loading{overflow:hidden}
 }
 /* dripping water streaks running down the glass (loader only — distinct from hero .drip) */
 .ldrip{
-  position:absolute;top:-30%;width:9px;height:var(--h,120px);
+  position:absolute;top:var(--top,-30%);width:9px;height:var(--h,120px);
   background:linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,.55) 70%, rgba(255,255,255,.85));
   border-radius:0 0 8px 8px;
   filter:blur(.4px);
-  animation-name:dripFall;animation-timing-function:cubic-bezier(.6,0,.85,.3);
-  animation-iteration-count:infinite;
+  animation:dripFall 2.4s cubic-bezier(.4,0,.5,1) both;
 }
 .ldrip::after{ /* the rounded droplet head leading the streak */
   content:"";position:absolute;left:50%;bottom:-7px;
@@ -349,10 +348,12 @@ body.loading{overflow:hidden}
   35%{transform:translateY(-51.5%) rotate(.8deg)}
   70%{transform:translateY(-48.5%) rotate(-.7deg)}
 }
+/* drips slide down a little then hold — they only vanish when the squeegee
+   clips the water layer they live in */
 @keyframes dripFall{
-  0%{transform:translateY(0);opacity:0}
-  12%{opacity:1}
-  100%{transform:translateY(135vh);opacity:1}
+  0%{transform:translateY(-8px);opacity:0}
+  15%{opacity:1}
+  100%{transform:translateY(70px);opacity:1}
 }
 @media (prefers-reduced-motion:reduce){
   .loader-water{animation:none;clip-path:inset(0 0 0 100%)}
