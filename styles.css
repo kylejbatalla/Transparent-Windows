@@ -280,7 +280,7 @@ footer ul a:hover{color:#fff}
   .burger.open span:nth-child(2){opacity:0}
   .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
   .two{grid-template-columns:1fr}
-  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-grid{grid-template-columns:1fr}
   .stats .wrap{grid-template-columns:1fr 1fr;gap:2rem}
   .foot-grid{grid-template-columns:1fr}
   section{padding:4rem 0}
