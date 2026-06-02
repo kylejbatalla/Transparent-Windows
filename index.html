@@ -12,6 +12,48 @@
 </head>
 <body>
 
+<!-- LOADER: window-wiping reveal -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-water">
+    <span class="ldrip" style="left:6%;  --h:130px; animation-delay:0s;    animation-duration:1.7s"></span>
+    <span class="ldrip" style="left:15%; --h:90px;  animation-delay:.5s;   animation-duration:2.1s"></span>
+    <span class="ldrip" style="left:23%; --h:170px; animation-delay:.2s;   animation-duration:1.9s"></span>
+    <span class="ldrip" style="left:34%; --h:110px; animation-delay:.9s;   animation-duration:2.3s"></span>
+    <span class="ldrip" style="left:42%; --h:150px; animation-delay:.35s;  animation-duration:1.8s"></span>
+    <span class="ldrip" style="left:51%; --h:95px;  animation-delay:.7s;   animation-duration:2.2s"></span>
+    <span class="ldrip" style="left:60%; --h:140px; animation-delay:.15s;  animation-duration:2s"></span>
+    <span class="ldrip" style="left:69%; --h:115px; animation-delay:1s;    animation-duration:1.9s"></span>
+    <span class="ldrip" style="left:78%; --h:175px; animation-delay:.45s;  animation-duration:2.1s"></span>
+    <span class="ldrip" style="left:87%; --h:100px; animation-delay:.8s;   animation-duration:2.3s"></span>
+    <span class="ldrip" style="left:94%; --h:135px; animation-delay:.25s;  animation-duration:1.8s"></span>
+  </div>
+  <div class="wiper">
+    <svg class="squeegee" viewBox="0 0 180 640" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sqMetal" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#cfe0ec"/><stop offset=".5" stop-color="#8aa3b5"/><stop offset="1" stop-color="#5a7384"/>
+        </linearGradient>
+        <linearGradient id="sqGrip" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0369a1"/>
+        </linearGradient>
+        <linearGradient id="sqBlade" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#0b1620"/><stop offset=".5" stop-color="#2c3e49"/><stop offset="1" stop-color="#0b1620"/>
+        </linearGradient>
+      </defs>
+      <!-- rubber blade (the wiping edge, sits at the very left so it tracks the reveal) -->
+      <rect x="0" y="24" width="14" height="592" rx="7" fill="url(#sqBlade)"/>
+      <!-- metal channel holding the blade -->
+      <rect x="12" y="34" width="26" height="572" rx="13" fill="url(#sqMetal)"/>
+      <rect x="16" y="40" width="6" height="560" rx="3" fill="#ffffff" opacity=".35"/>
+      <!-- bracket connecting channel to handle -->
+      <path d="M34 296 H102 a14 14 0 0 1 14 14 v20 a14 14 0 0 1 -14 14 H34 Z" fill="#445661"/>
+      <!-- handle grip -->
+      <rect x="98" y="286" width="72" height="68" rx="30" fill="url(#sqGrip)"/>
+      <rect x="110" y="300" width="46" height="40" rx="20" fill="#0b1620" opacity=".18"/>
+    </svg>
+  </div>
+</div>
+
 <!-- NAV -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
@@ -87,43 +129,56 @@
     </div>
     <div class="svc-grid">
       <div class="svc reveal d1">
+        <span class="tag">Most popular</span>
         <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 22V12h6v10"/></svg></span>
-        <h3>Essential</h3>
-        <div class="price">$99<span>/ visit</span></div>
-        <p style="color:var(--ink-soft);font-size:.95rem">Perfect for apartments &amp; small homes that need a quick, reliable refresh.</p>
+        <h3>Essential Wash</h3>
+        <div class="price">$10<span>/ pane</span></div>
+        <p style="color:var(--ink-soft);font-size:.95rem">Our perfect pick for homes that wants a proficient clean.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Up to 10 exterior windows</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Sills &amp; frames wiped</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Eco-friendly solution</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>All exterior panes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Frames &amp; sills wiped</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Screens cleaned</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost">Choose Essential</a>
+        <a href="#contact" class="btn btn-ghost">Choose essential wash</a>
       </div>
 
       <div class="svc featured reveal d2">
-        <span class="tag">Most popular</span>
         <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m12 2 2.4 7.4H22l-6 4.6 2.3 7L12 16.8 5.7 21l2.3-7-6-4.6h7.6z"/></svg></span>
-        <h3>Intermediate</h3>
-        <div class="price">$149<span>/ visit</span></div>
-        <p style="color:var(--ink-soft);font-size:.95rem">Our crowd favorite — inside &amp; out for a truly spotless shine.</p>
+        <h3>Precise Wash</h3>
+        <div class="price">$15<span>/ pane</span></div>
+        <p style="color:var(--ink-soft);font-size:.95rem">For that spotless full finish</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Up to 20 windows, in &amp; out</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Screen &amp; track cleaning</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Hard-water spot treatment</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>All exterior &amp; interior panes washed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Frames &amp; sills wiped</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Screens cleaned</li>
         </ul>
-        <a href="#contact" class="btn btn-primary">Choose Intermediate</a>
+        <a href="#contact" class="btn btn-primary">Choose precise wash</a>
       </div>
 
       <div class="svc reveal d3">
         <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span>
-        <h3>Advanced</h3>
-        <div class="price">$199<span>/ visit</span></div>
-        <p style="color:var(--ink-soft);font-size:.95rem">Full-service deep clean for large homes &amp; commercial fronts.</p>
+        <h3>Solar Wash</h3>
+        <div class="price">$12<span>/ panel</span></div>
+        <p style="color:var(--ink-soft);font-size:.95rem">Efficient deep clean for your home's solar system</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Unlimited windows, in &amp; out</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>2-story reach &amp; skylights</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Gutter &amp; screen detailing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>All panels</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>2x solar efficiency</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Thourough scrub &amp; rinse</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost">Choose Advanced</a>
+      <a href="#contact" class="btn btn-ghost">Choose solar wash</a>
+      </div>
+
+      <div class="svc reveal d4">
+        <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span>
+        <h3>Commercial Clean</h3>
+        <div class="price">$15<span>/ pane</span></div>
+        <p style="color:var(--ink-soft);font-size:.95rem">Let's give your business a spotless look!</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>All exterior &amp; interior panes washed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Frames &amp; sills wiped</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Commercial/office/storefronts</li>
+        </ul>
+      <a href="#contact" class="btn btn-ghost">Choose commercial clean</a>
       </div>
     </div>
   </div>
@@ -197,7 +252,7 @@
       <h2 class="reveal d1">Get your free cleaning quote</h2>
       <p class="lead reveal d2">Tell us a bit about your home or office and what you need cleaned. We'll reply fast with a personalized plan that makes life easier. Let's make your place shine!</p>
       <div class="ci-list">
-        <div class="ci reveal d1"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><div><div class="t">(510) 269-7611</div><div class="s">Mon–Sat, 7am–6pm</div></div></div>
+        <div class="ci reveal d1"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><div><div class="t">(925) 264-9532</div><div class="s"></div></div></div>
         <div class="ci reveal d2"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><div><div class="t">crystalglasspanes@gmail.com</div><div class="s">We reply within a few hours</div></div></div>
         <div class="ci reveal d3"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="t">Serving the greater metro area of Pleasanton, Ca</div><div class="s">25-mile radius — ask about your zip</div></div></div>
       </div>
@@ -217,7 +272,7 @@
           <select id="package" name="package"><option>Essential — $99</option><option selected>Intermediate — $149</option><option>Advanced — $199</option><option>Not sure / custom</option></select>
         </div>
       </div>
-      <div class="field"><label for="details">What do you need cleaned?</label><textarea id="details" name="details" placeholder="e.g. 12 windows, 2 stories, some broken seals..."></textarea></div>
+      <div class="field"><label for="details">What do you need cleaned?</label><textarea id="details" name="details" placeholder="e.g. 12 windows, 2 stories, 10 solar panels..."></textarea></div>
       <button type="submit" class="btn btn-primary">Request My Free Quote
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </button>
@@ -274,9 +329,9 @@
         </div>
         <p class="blurb">Communicating clearer windows — making your day-to-day brighter with clarity and care. Locally owned, fully insured.</p>
       </div>
-      <div><h5>Services</h5><ul><li><a href="#services">Essential Clean</a></li><li><a href="#services">Intermediate</a></li><li><a href="#services">Advanced</a></li><li><a href="#contact">Custom Quote</a></li></ul></div>
+      <div><h5>Services</h5><ul><li><a href="#services">Essential Wash</a></li><li><a href="#services">Precise Wash</a></li><li><a href="#services">Solar Wash</a></li><li><a href="#contact">Commercial Clean</a></li></ul></div>
       <div><h5>Company</h5><ul><li><a href="#about">How It Works</a></li><li><a href="#contact">Contact</a></li><li><a href="#reviews">Reviews</a></li></ul></div>
-      <div><h5>Get in touch</h5><ul><li><a href="tel:5550123456">(555) 012-3456</a></li><li><a href="mailto:hello@transparentwindows.com">hello@transparentwindows.com</a></li><li><a href="#contact">Free Quote</a></li></ul></div>
+      <div><h5>Get in touch</h5><ul><li><a href="tel:5550123456">(925) 264-9532</a></li><li><a href="mailto:hello@transparentwindows.com">crystalglasspanes@gmail.com</a></li><li><a href="#contact">Free Quote</a></li></ul></div>
     </div>
     <div class="foot-bottom">
       <span>© <span id="year"></span> Transparent Windows. All rights reserved.</span>

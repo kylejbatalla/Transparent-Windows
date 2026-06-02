@@ -1,3 +1,19 @@
+// loader: window-wiping reveal (plays once per browser tab session)
+(function(){
+  const loader = document.getElementById('loader');
+  if(!loader) return;
+  if(sessionStorage.getItem('tw_seen')){ loader.remove(); return; }
+  sessionStorage.setItem('tw_seen','1');
+  document.body.classList.add('loading');
+  const finish = () => {
+    loader.classList.add('done');
+    document.body.classList.remove('loading');
+    setTimeout(() => loader.remove(), 600);
+  };
+  // total = 0.35s drip + 1.7s wipe + small hold
+  setTimeout(finish, 2200);
+})();
+
 // year
 document.getElementById('year').textContent = new Date().getFullYear();
 
