@@ -68,12 +68,76 @@ const statIO = new IntersectionObserver((entries) => {
 }, {threshold:0.5});
 document.querySelectorAll('.stat .num').forEach(el => statIO.observe(el));
 
-// form
-const form = document.getElementById('quoteForm');
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  if(!form.checkValidity()){ form.reportValidity(); return; }
-  document.getElementById('success').classList.add('show');
-  form.querySelector('button').textContent = 'Sent ✓';
-  setTimeout(() => form.reset(), 400);
-});
+// WORKER_URL is defined in config.js (loaded before this file in index.html)
+
+async function sendFormAsJSON(form, formType, successEl, sentLabel) {
+  const submitBtn    = form.querySelector('button[type="submit"]');
+  const originalHTML = submitBtn.innerHTML;
+
+  // Collect form data as a plain object → JSON
+  const data = {};
+  new FormData(form).forEach((value, key) => {
+    if (form.elements[key]?.type === 'checkbox') {
+      data[key] = form.elements[key].checked;
+    } else {
+      data[key] = value;
+    }
+  });
+  // metadata
+  data._formType    = formType;          // 'quote' or 'review'
+  data._submittedAt = new Date().toISOString();
+  data._source      = window.location.href;
+
+  submitBtn.disabled  = true;
+  submitBtn.innerHTML = 'Sending…';
+
+  try {
+    const res = await fetch(WORKER_URL, {
+      method:  'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept':       'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || `Submission failed (${res.status})`);
+    }
+
+    successEl.classList.add('show');
+    submitBtn.innerHTML = sentLabel;
+    setTimeout(() => {
+      form.reset();
+      submitBtn.disabled  = false;
+      submitBtn.innerHTML = originalHTML;
+      successEl.classList.remove('show');
+    }, 4000);
+  } catch (err) {
+    console.error('Form submission error:', err);
+    submitBtn.disabled  = false;
+    submitBtn.innerHTML = originalHTML;
+    alert("Sorry — we couldn't send your message. Please try again or call (925) 264-9532.");
+  }
+}
+
+// Quote form
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!quoteForm.checkValidity()) { quoteForm.reportValidity(); return; }
+    sendFormAsJSON(quoteForm, 'quote', document.getElementById('success'), 'Sent ✓');
+  });
+}
+
+// Review form
+const reviewForm = document.getElementById('reviewForm');
+if (reviewForm) {
+  reviewForm.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!reviewForm.checkValidity()) { reviewForm.reportValidity(); return; }
+    sendFormAsJSON(reviewForm, 'review', document.getElementById('reviewSuccess'), 'Submitted ✓');
+  });
+}
