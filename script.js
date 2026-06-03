@@ -85,7 +85,15 @@ async function sendFormAsJSON(form, formType, successEl, sentLabel) {
   });
   // metadata
   data._formType    = formType;          // 'quote' or 'review'
-  data._submittedAt = new Date().toISOString();
+  data._submittedAt = new Date().toLocaleString('en-US', {
+    timeZone: 'America/Los_Angeles',
+    year:   'numeric',
+    month:  'short',
+    day:    'numeric',
+    hour:   'numeric',
+    minute: '2-digit',
+    hour12: true,
+  }) + ' PT';
   data._source      = window.location.href;
 
   submitBtn.disabled  = true;
