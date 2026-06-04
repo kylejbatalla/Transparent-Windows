@@ -126,7 +126,7 @@ async function sendFormAsJSON(form, formType, successEl, sentLabel) {
     console.error('Form submission error:', err);
     submitBtn.disabled  = false;
     submitBtn.innerHTML = originalHTML;
-    alert("Sorry — we couldn't send your message. Please try again or call (925) 264-9532.");
+    alert("Sorry — we couldn't send your message. Please try again in a couple minutes or call (925) 264-9532.");
   }
 }
 
