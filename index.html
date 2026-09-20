@@ -9,6 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="resources/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16.png" />
+<link rel="apple-touch-icon" href="resources/apple-touch-icon.png" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,11 +101,8 @@
 <!-- NAV -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="logo">
-      <span class="mark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg>
-      </span>
-      <span class="logo-text">Mark's Spotless Panes<small class="logo-tag">Based in Pleasanton, CA</small></span>
+    <a href="#top" class="logo brand" aria-label="Mark's Spotless Panes — Window Cleaning, home">
+      <img class="brand-img" src="resources/secondary-logo.png" alt="Mark's Spotless Panes — Window Cleaning" />
     </a>
     <nav class="nav-links" id="menu">
       <a class="link" href="#services">Services</a>
@@ -128,7 +129,7 @@
     <div class="hero-copy">
       <span class="eyebrow reveal">✦ Trusted local window pros</span>
       <h1 class="reveal d1">See the world<br><span class="grad">crystal clear.</span></h1>
-      <p class="lead reveal d2">Streak-free, spotless windows for your home and business. We bring the shine — you enjoy the view. Backed by a 100% satisfaction guarantee.</p>
+      <p class="lead reveal d2">Streak-free, spotless windows for your home and business. We bring the shine, you enjoy the view. Backed by a 100% satisfaction guarantee.</p>
       <div class="hero-cta reveal d3">
         <a href="#contact" class="btn btn-primary">Get a Free Quote
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -173,7 +174,34 @@
     <div class="svc-grid">
       <div class="svc featured reveal d1">
         <span class="tag">Most popular</span>
-        <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg></span>
+        <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 429.0 429.0" fill="currentColor" aria-hidden="true"><g transform="translate(0.0 8.5)"><g transform="translate(0.000000,412.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M2065 3567 c-38 -40 -117 -114 -175 -166 -58 -51 -119 -108 -137
+-125 -83 -80 -283 -250 -313 -266 -14 -7 -43 -28 -65 -47 -22 -19 -65 -54 -95
+-79 -69 -58 -202 -178 -249 -226 -20 -20 -81 -75 -136 -122 -55 -48 -136 -120
+-180 -162 -45 -41 -95 -83 -112 -94 -18 -10 -39 -31 -49 -45 -9 -14 -22 -25
+-29 -25 -22 0 -47 -37 -43 -66 8 -71 132 -93 193 -34 17 16 48 38 70 49 21 10
+55 33 75 50 40 36 286 252 344 302 21 19 98 91 170 161 72 70 150 144 174 165
+23 21 57 52 75 69 93 90 303 268 351 298 17 10 63 47 103 82 85 74 116 81 177
+39 20 -14 51 -32 68 -41 17 -9 45 -30 62 -48 17 -17 54 -50 81 -73 131 -111
+272 -240 366 -335 57 -58 228 -214 379 -347 336 -295 359 -314 390 -331 14 -7
+41 -26 60 -42 45 -37 75 -35 135 7 55 40 68 56 59 78 -6 17 -64 64 -111 92
+-17 10 -37 29 -44 42 -7 13 -16 23 -20 23 -4 0 -31 24 -61 53 -93 89 -109 101
+-161 127 -34 16 -59 37 -72 60 l-20 35 -1 377 c-1 289 -4 381 -14 393 -10 12
+-40 15 -164 15 -83 0 -158 -5 -166 -10 -12 -7 -16 -44 -20 -194 -4 -163 -7
+-186 -24 -205 -23 -25 -65 -27 -109 -5 -38 20 -44 28 -57 76 -6 20 -20 45 -33
+56 -73 66 -129 112 -137 112 -6 0 -68 57 -138 128 -205 203 -282 272 -306 272
+-13 -1 -48 -28 -91 -73z M2130 3093 c-8 -3 -31 -20 -50 -39 -19 -18 -57 -55
+-85 -82 -72 -69 -290 -262 -317 -280 -13 -9 -42 -32 -65 -51 -23 -20 -61 -52
+-85 -72 -24 -20 -132 -116 -240 -212 -161 -143 -216 -186 -294 -228 -85 -46
+-99 -57 -114 -93 l-18 -41 -4 -748 -3 -749 20 -14 c30 -22 779 -14 802 9 13
+13 15 41 12 179 -2 89 -2 343 0 562 l3 400 24 49 c18 34 35 52 57 61 24 9 124
+12 384 11 l353 -1 27 -21 c36 -26 65 -103 66 -173 1 -30 0 -277 -1 -547 -2
+-336 1 -499 8 -513 6 -12 21 -20 38 -21 23 0 695 0 744 1 46 0 45 -19 41 777
+l-5 748 -27 35 c-15 19 -57 49 -92 67 -48 25 -94 64 -189 161 -69 70 -143 141
+-165 157 -22 16 -58 45 -81 65 -22 19 -62 53 -87 75 -26 22 -85 76 -131 120
+-263 253 -406 378 -459 400 -38 16 -43 16 -67 8z"/>
+</g></g></svg></span>
         <h3>Essential Wash</h3>
         <div class="price">$10<span>/ pane</span></div>
         <p style="color:var(--ink-soft);font-size:.95rem">Our perfect pick for homes that wants a proficient clean</p>
@@ -186,7 +214,54 @@
       </div>
 
       <div class="svc reveal d2">
-        <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m12 2 2.4 7.4H22l-6 4.6 2.3 7L12 16.8 5.7 21l2.3-7-6-4.6h7.6z"/></svg></span>
+        <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 417.0 417.0" fill="currentColor" aria-hidden="true"><g transform="translate(17.0 0.0)"><g transform="translate(0.000000,417.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M2548 3685 c-14 -15 -1000 -24 -1070 -10 -86 17 -113 -17 -104 -129
+12 -157 19 -1346 12 -2231 0 -55 1 -179 3 -275 3 -122 0 -183 -8 -198 -29 -54
+-142 -71 -185 -29 -13 13 -29 40 -37 60 -13 36 -40 50 -54 27 -12 -19 -85 -32
+-118 -20 -72 24 -126 127 -114 215 13 89 68 132 154 119 35 -5 55 -16 85 -46
+33 -33 39 -36 46 -21 9 23 9 329 0 339 -4 4 -28 -12 -53 -35 l-45 -41 -63 0
+c-98 0 -137 43 -137 149 0 101 41 141 146 141 53 0 66 -4 100 -31 l38 -30 12
+16 c18 25 28 137 19 224 -4 42 -7 182 -5 311 2 230 -3 310 -21 310 -5 0 -20
+-21 -33 -47 -33 -65 -55 -83 -113 -90 -91 -10 -123 30 -131 168 -5 99 7 149
+45 179 49 38 142 18 184 -39 12 -17 29 -31 36 -31 17 0 40 88 48 185 9 118 10
+117 -156 114 -73 -1 -172 -1 -219 0 -124 3 -125 2 -125 -193 0 -785 -1 -987
+-8 -1496 -3 -217 -1 -415 4 -454 11 -81 -1 -137 -36 -172 -20 -20 -33 -24 -76
+-23 -43 2 -55 -2 -71 -20 -28 -35 -22 -55 23 -80 l40 -23 347 3 c191 2 429 4
+530 4 165 0 185 2 197 18 9 13 10 28 4 55 -23 99 4 610 35 670 22 43 39 50
+171 68 145 20 353 9 406 -22 74 -44 84 -84 94 -379 8 -271 20 -361 52 -393
+l25 -25 351 6 350 7 71 41 c144 85 163 101 155 129 -4 14 -7 520 -8 1126 -1
+1182 1 1137 -52 1135 -13 -1 -117 -3 -232 -4 -142 -2 -211 -7 -219 -15 -9 -9
+-9 -32 0 -99 8 -62 9 -158 3 -323 -14 -375 -4 -752 20 -817 11 -29 27 -29 69
+2 46 34 87 40 136 20 53 -21 78 -64 79 -136 0 -92 -40 -139 -120 -139 -44 0
+-71 13 -107 51 -36 39 -54 37 -69 -8 -22 -68 6 -318 37 -330 9 -3 30 11 53 36
+33 36 43 41 80 41 35 0 49 -6 76 -33 68 -68 56 -230 -20 -277 -52 -32 -83 -26
+-132 26 -48 52 -67 52 -77 3 -3 -18 -20 -70 -38 -116 -34 -90 -52 -109 -115
+-119 -54 -8 -80 18 -87 88 -15 152 -24 710 -17 1143 2 149 3 463 2 699 -1 399
+2 584 14 913 5 111 3 134 -11 147 -15 15 -55 22 -66 11z m-736 -367 c57 -32
+80 -76 86 -162 8 -124 -27 -199 -100 -215 -60 -14 -106 2 -157 53 l-46 46 -4
+86 c-2 49 2 96 8 112 14 33 115 102 149 102 13 0 42 -10 64 -22z m515 -9 c62
+-30 80 -58 88 -137 13 -133 -33 -210 -139 -232 -93 -19 -136 2 -160 79 -46
+147 -22 240 74 292 46 24 84 24 137 -2z m-25 -545 c99 -37 111 -58 105 -165
+-2 -47 -10 -95 -16 -108 -26 -49 -146 -78 -210 -52 -41 17 -74 88 -79 166 -4
+76 26 141 79 167 43 23 41 23 121 -8z m-484 -5 c67 -33 85 -68 78 -158 -7 -91
+-21 -121 -66 -143 -108 -54 -228 14 -238 135 -5 64 12 104 61 141 66 50 101
+56 165 25z m1278 -80 c34 -32 47 -81 39 -147 -10 -85 -28 -120 -70 -138 -39
+-16 -76 -11 -99 15 -17 19 -66 153 -66 181 0 23 50 97 74 109 31 16 95 6 122
+-20z m-58 -406 c4 -29 -34 -56 -60 -42 -20 11 -25 55 -5 63 28 11 62 1 65 -21z
+m-714 -35 c57 -32 92 -102 80 -160 -13 -58 -45 -79 -133 -86 -91 -6 -125 7
+-145 59 -9 22 -16 45 -16 52 0 35 34 122 57 144 21 22 30 25 70 19 25 -3 64
+-16 87 -28z m-466 2 c40 -24 56 -62 48 -113 -16 -99 -105 -162 -195 -137 -23
+6 -59 28 -81 49 -35 33 -40 44 -40 82 0 55 29 104 72 123 51 22 156 20 196 -4z
+m1238 -104 c56 -37 60 -219 5 -242 -93 -38 -201 -2 -201 67 0 39 62 173 86
+188 23 14 78 7 110 -13z m-2014 -38 c17 -11 39 -41 50 -64 17 -39 17 -47 5
+-77 -23 -53 -61 -77 -121 -76 -102 2 -138 27 -144 102 -2 31 1 63 8 76 31 60
+143 81 202 39z m1243 -223 c47 -19 65 -48 75 -113 18 -133 -15 -192 -114 -200
+-70 -6 -120 12 -148 51 -19 27 -23 45 -23 117 l0 86 27 37 c16 19 38 38 50 40
+31 6 96 -3 133 -18z m-507 0 c21 -9 46 -29 55 -44 35 -60 8 -205 -45 -244 -14
+-11 -48 -22 -75 -24 -39 -4 -55 0 -82 19 -55 37 -75 80 -75 164 -1 63 2 75 23
+98 42 45 130 58 199 31z"/>
+</g></g></svg></span>
         <h3>Precise Wash</h3>
         <div class="price">$15<span>/ pane</span></div>
         <p style="color:var(--ink-soft);font-size:.95rem">For that spotless full finish</p>
@@ -199,7 +274,7 @@
       </div>
 
       <div class="svc reveal d3">
-        <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></span>
+        <span class="svc-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"><line x1="12" y1="0.9" x2="12" y2="3.2"/><line x1="6.8" y1="2.5" x2="8.2" y2="4.2"/><line x1="17.2" y1="2.5" x2="15.8" y2="4.2"/><line x1="4.3" y1="8.4" x2="6.4" y2="8.4"/><line x1="19.7" y1="8.4" x2="17.6" y2="8.4"/></g><path fill="currentColor" stroke="none" d="M8.3 9.5a3.7 3.7 0 0 1 7.4 0z"/><path fill="currentColor" stroke="none" d="M7.05 13.50 9.40 13.50 8.35 15.75 6.00 15.75Z M9.80 13.50 12.15 13.50 11.10 15.75 8.75 15.75Z M12.55 13.50 14.90 13.50 13.85 15.75 11.50 15.75Z M8.10 10.60 10.45 10.60 9.40 12.85 7.05 12.85Z M10.85 10.60 13.20 10.60 12.15 12.85 9.80 12.85Z M13.60 10.60 15.95 10.60 14.90 12.85 12.55 12.85Z"/><g stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none"><line x1="12" y1="15.9" x2="12" y2="19"/><line x1="9.4" y1="20.2" x2="14.6" y2="20.2"/><line x1="12" y1="19" x2="9.4" y2="20.2"/><line x1="12" y1="19" x2="14.6" y2="20.2"/></g></svg></span>
         <h3>Solar Wash</h3>
         <div class="price">$10<span>/ panel</span></div>
         <p style="color:var(--ink-soft);font-size:.95rem">Efficient deep clean for your home's solar system</p>
@@ -250,7 +325,7 @@
         <span class="stars">★★★★★</span>
         <p class="body">Marcos and Thomas came out and did a great job. They were prompt, cleaned everything up and the windows look great. Would definitely recommend.</p>
         <div class="who">
-          <span class="avatar">A</span>
+          <span class="avatar">R</span>
           <div><div class="name">Rory P.</div></div>
         </div>
       </div>
@@ -261,17 +336,19 @@
           The owner left my home exactly the way he found it, except of course he left me with spotless windows! 
           The price was great and I will definitely be hiring him again.</p>
         <div class="who">
-          <span class="avatar">A</span>
+          <span class="avatar">M</span>
           <div><div class="name">Molly O.</div></div>
         </div>     
     </div>
 
            <div class="rev reveal d1">
         <span class="stars">★★★★★</span>
-        <p class="body">Excellent job cleaning my house windows! Marcos was professional, thorough, and left every window sparkling clean. The difference is amazing, and my home looks so much brighter. I would definitely recommend them and will use their service again.</p>
+        <p class="body">Such a great experience! They were prompt, friendly, helpful, and immediately understood what I was looking for. What impressed me most was that they genuinely took their time—they didn’t rush through the job just to get it done. They paid attention to the details, and my windows looked amazing afterward!
+        They also took the time to explain how I could keep the windows cleaner for longer, which I really appreciated. They’re young and just getting started with their business, but don’t let that make you hesitate. They were professional, hardworking, respectful, and clearly take pride in doing a good job.
+        I love supporting a new local business when the effort and quality are there, and these guys absolutely deserve the support. I’ll definitely be calling them again and happily recommend them!</p>
         <div class="who">
-          <span class="avatar">A</span>
-          <div><div class="name">Paul F.</div></div>
+          <span class="avatar">P</span>
+          <div><div class="name">P. G.</div></div>
         </div>
       </div>
     </div>
@@ -326,9 +403,8 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="logo">
-          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg></span>
-          Mark's Spotless Panes
+        <div class="logo brand brand-footer">
+          <img class="brand-img" src="resources/secondary-logo.png" alt="Mark's Spotless Panes — Window Cleaning" />
         </div>
         <p class="blurb">Communicating clearer windows — making your day-to-day brighter with clarity and care. Locally owned, fully insured.</p>
       </div>

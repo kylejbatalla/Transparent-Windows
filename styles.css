@@ -162,8 +162,10 @@ section{padding:6rem 0;position:relative}
 .svc:hover::after{transform:scaleX(1)}
 .svc.featured{border-color:var(--sky-300);box-shadow:var(--shadow-md)}
 .svc .tag{position:absolute;top:1.4rem;right:1.4rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--sky-500),var(--sky-600));padding:.3rem .7rem;border-radius:999px}
-.svc .svc-ic{width:58px;height:58px;border-radius:16px;background:var(--sky-50);color:var(--sky-600);display:grid;place-items:center;margin-bottom:1.3rem;transition:transform .35s}
+.svc .svc-ic{width:58px;height:58px;border-radius:16px;background:linear-gradient(135deg,var(--sky-500),var(--sky-600));color:#fff;display:grid;place-items:center;margin-bottom:1.3rem;box-shadow:0 6px 16px rgba(2,132,199,.30);transition:transform .35s}
 .svc:hover .svc-ic{transform:rotate(-6deg) scale(1.06)}
+.svc .svc-ic svg{width:36px;height:36px}
+.svc:last-child .svc-ic svg{width:42px;height:42px}
 .svc h3{font-size:1.4rem;margin-bottom:.4rem}
 .svc .price{font-family:var(--ff-head);font-weight:800;font-size:2rem;color:var(--ink);margin:.6rem 0 1rem}
 .svc .price span{font-size:.95rem;font-weight:600;color:var(--mist)}
@@ -362,4 +364,29 @@ body.loading{overflow:hidden}
 @media (prefers-reduced-motion:reduce){
   .loader-water{animation:none;clip-path:inset(0 0 0 100%)}
   .wiper,.ldrip{display:none}
+}
+
+/* ===== Secondary logo (navbar + footer) ===== */
+.brand{gap:0}
+.brand-img{display:block;height:58px;width:auto;max-width:min(68vw,380px);transition:height .3s}
+header.nav.scrolled .brand-img{height:50px}
+/* white rounded plate behind the full-color logo in dark contexts */
+[data-theme="dark"] .nav .brand-img,
+.brand-footer .brand-img{background:#fff;border-radius:10px;padding:6px 12px;box-sizing:content-box}
+.brand-footer{margin-bottom:1rem}
+.brand-footer .brand-img{height:60px;max-width:min(80vw,380px)}
+@media(max-width:600px){
+  .nav .brand-img{height:47px}
+  header.nav.scrolled .brand-img{height:42px}
+  .brand-footer .brand-img{height:52px}
+  [data-theme="dark"] .nav .brand-img,
+  .brand-footer .brand-img{padding:5px 10px;border-radius:8px}
+  /* center all footer content on mobile */
+  footer{text-align:center}
+  .foot-grid{justify-items:center}
+  .brand-footer{justify-content:center}
+  footer p.blurb{margin-left:auto;margin-right:auto}
+  footer ul{justify-items:center}
+  .foot-bottom{flex-direction:column;justify-content:center;text-align:center}
+  .foot-bottom .socials{justify-content:center}
 }
